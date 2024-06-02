@@ -5,9 +5,12 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   release:
-    name: release
+    name: Build, test, publish to NPM and generate release notes
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
