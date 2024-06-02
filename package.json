@@ -1,5 +1,6 @@
 {
   "name": "url4irl",
+  "private": true,
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +10,10 @@
     "lint": "eslint \"packages/**/*.{ts,js,tsx,jsx}\"",
     "lint:actions": "sh ./scripts/lint_actions.sh",
     "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/url4irl/url4irl.git"
   },
   "keywords": [],
   "lint-staged": {

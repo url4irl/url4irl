@@ -16,10 +16,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 8
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: pnpm install
@@ -35,7 +42,7 @@ jobs:
           git config --global user.email "marcelovicentegc@gmail.com"
 
       - name: Publish
-        run: pnpm lerna publish --preid rc --dist-tag rc --yes --force-publish --no-verify-access --create-release github
+        run: pnpm lerna publish --yes --force-publish --create-release github
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
