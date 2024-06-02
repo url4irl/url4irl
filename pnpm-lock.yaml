@@ -8,6 +8,12 @@ importers:
 
   .:
     devDependencies:
+      '@action-validator/cli':
+        specifier: ^0.6.0
+        version: 0.6.0(@action-validator/core@0.6.0)
+      '@action-validator/core':
+        specifier: ^0.6.0
+        version: 0.6.0
       eslint:
         specifier: ^9.4.0
         version: 9.4.0
@@ -59,6 +65,20 @@ importers:
         version: link:../mongodb
 
 packages:
+
+  /@action-validator/cli@0.6.0(@action-validator/core@0.6.0):
+    resolution: {integrity: sha512-Z8TYOK4GqUIpI0UuspUJPB6dhr0niTumhwI5iiZVqFRXm4u05bZawnFKltpvoFUfJg9mHbbIBlleqsRJAgl53Q==}
+    hasBin: true
+    peerDependencies:
+      '@action-validator/core': 0.6.0
+    dependencies:
+      '@action-validator/core': 0.6.0
+      chalk: 5.2.0
+    dev: true
+
+  /@action-validator/core@0.6.0:
+    resolution: {integrity: sha512-tPglwCr8Mm8SWzwnVewwFmqRx91F0WvMsM0BRAqH4CLalyGndm53Xvp+UcUSzswpk1wkjIDYI7RyEhWMLyPkig==}
+    dev: true
 
   /@babel/code-frame@7.24.6:
     resolution: {integrity: sha512-ZJhac6FkEd1yhG2AHOmfcXG4ceoLltoCVJjN5XsWN9BifBQr+cHJbWi0h68HZuSORq+3WtJ2z0hwF2NG1b5kcA==}
@@ -1737,6 +1757,11 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    dev: true
+
+  /chalk@5.2.0:
+    resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
   /chalk@5.3.0:
@@ -3812,7 +3837,7 @@ packages:
     hasBin: true
     dependencies:
       async: 3.2.5
-      chalk: 4.1.0
+      chalk: 4.1.2
       filelist: 1.0.4
       minimatch: 3.1.2
     dev: true
@@ -3821,7 +3846,7 @@ packages:
     resolution: {integrity: sha512-LMIgiIrhigmPrs03JHpxUh2yISK3vLFPkAodPeo0+BuF7wA2FoQbkEg1u8gBYBThncu7e1oEDUfIXVuTqLRUjw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.2
       diff-sequences: 29.6.3
       jest-get-type: 29.6.3
       pretty-format: 29.7.0
@@ -4835,7 +4860,7 @@ packages:
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.7
       axios: 1.7.2
-      chalk: 4.1.0
+      chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       cliui: 8.0.1
@@ -4994,7 +5019,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       bl: 4.1.0
-      chalk: 4.1.0
+      chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       is-interactive: 1.0.0

@@ -7,6 +7,7 @@
     "build": "turbo run build",
     "test": "turbo run test",
     "lint": "eslint \"packages/**/*.{ts,js,tsx,jsx}\"",
+    "lint:actions": "sh ./scripts/lint_actions.sh",
     "prepare": "husky"
   },
   "keywords": [],
@@ -17,6 +18,8 @@
   },
   "author": "Marcelo Cardoso <marcelovicentegc@gmail.com>",
   "devDependencies": {
+    "@action-validator/cli": "^0.6.0",
+    "@action-validator/core": "^0.6.0",
     "eslint": "^9.4.0",
     "eslint-config-next": "^14.2.3",
     "husky": "^9.0.11",

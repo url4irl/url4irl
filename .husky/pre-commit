@@ -17,3 +17,9 @@ echo "Linting the entire project"
 pnpm run lint
 
 echo "Linting the entire project - Done"
+
+echo "Validating GitHub actions syntax"
+
+pnpm run lint:actions
+
+echo "Validating GitHub actions syntax - Done"
