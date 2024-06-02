@@ -1,6 +1,6 @@
 {
   "name": "@url4irl/users",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "User management package that provides a simple interface to interact with user data, providing methods to manipulate user data.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
