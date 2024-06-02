@@ -1,0 +1,29 @@
+{
+  "name": "@url4irl/users",
+  "version": "0.1.0",
+  "description": "User management package that provides a simple interface to interact with user data, providing methods to manipulate user data.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "directory": "packages/users",
+    "type": "git",
+    "url": "git+https://github.com/url4irl/url4irl.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Marcelo Cardoso <marcelovicentegc@gmail.com>",
+  "dependencies": {
+    "@url4irl/mongodb": "workspace:^"
+  }
+}

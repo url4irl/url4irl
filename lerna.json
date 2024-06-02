@@ -1,0 +1,13 @@
+{
+  "npmClient": "pnpm",
+  "version": "independent",
+  "loglevel": "success",
+  "command": {
+    "publish": {
+      "allowBranch": ["main"],
+      "conventionalCommits": true,
+      "message": "chore(release): publish [skip ci]"
+    }
+  },
+  "ignoreChanges": ["CHANGELOG.md", "**/*.test.*"]
+}

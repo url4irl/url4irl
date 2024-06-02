@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Check if commit is on main branch
+if [ "$(git rev-parse --abbrev-ref HEAD)" = "main" ]; then
+    exec < /dev/tty && sh ./scripts/gh_vercel_check.sh
+fi
+
+echo "Running lint-staged"
+
+npx lint-staged
+
+echo "Running lint-staged - Done"
+
+echo "Linting the entire project"
+
+pnpm run lint
+
+echo "Linting the entire project - Done"
