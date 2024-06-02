@@ -26,6 +26,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Configure workflow user (to generate release notes)
+        run: git config --global user.name "marcelovicentegc"
+        run: git config --global user.email "marcelovicentegc@gmail.com"
+
       - name: Publish
         run: pnpm lerna publish --preid rc --dist-tag rc --yes --force-publish --no-verify-access --create-release github
         env:
