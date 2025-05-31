@@ -1,0 +1,39 @@
+{
+  "name": "@url4irl/auth",
+  "version": "0.1.0",
+  "description": "Authentication functionality for URL4IRL",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "directory": "packages/auth",
+    "type": "git",
+    "url": "git+https://github.com/url4irl/url4irl.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "Marcelo Cardoso <marcelovicentegc@gmail.com>",
+  "dependencies": {
+    "@url4irl/core": "workspace:^",
+    "@url4irl/db": "workspace:^",
+    "drizzle-orm": "^0.30.10",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.6",
+    "vitest": "^1.6.0"
+  }
+}

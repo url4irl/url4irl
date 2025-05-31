@@ -1,0 +1,30 @@
+{
+  "name": "@url4irl/core",
+  "version": "0.1.0",
+  "description": "Core types and utilities for URL4IRL packages",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "directory": "packages/core",
+    "type": "git",
+    "url": "git+https://github.com/url4irl/url4irl.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "Marcelo Cardoso <marcelovicentegc@gmail.com>",
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "vitest": "^1.6.0"
+  }
+}

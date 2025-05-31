@@ -1,0 +1,40 @@
+{
+  "name": "@url4irl/api",
+  "version": "0.1.0",
+  "description": "API layer for URL4IRL packages",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "directory": "packages/api",
+    "type": "git",
+    "url": "git+https://github.com/url4irl/url4irl.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "Marcelo Cardoso <marcelovicentegc@gmail.com>",
+  "dependencies": {
+    "@url4irl/core": "workspace:^",
+    "@url4irl/db": "workspace:^",
+    "@url4irl/auth": "workspace:^",
+    "@url4irl/follow": "workspace:^",
+    "@url4irl/posts": "workspace:^",
+    "@url4irl/comments": "workspace:^",
+    "@url4irl/stars": "workspace:^",
+    "@url4irl/dms": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "vitest": "^1.6.0"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@url4irl/db",
+  "version": "0.1.0",
+  "description": "Database abstraction layer with Drizzle ORM for URL4IRL",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "directory": "packages/db",
+    "type": "git",
+    "url": "git+https://github.com/url4irl/url4irl.git"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "Marcelo Cardoso <marcelovicentegc@gmail.com>",
+  "dependencies": {
+    "@url4irl/core": "workspace:^",
+    "drizzle-orm": "^0.30.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "drizzle-kit": "^0.21.4",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "postgres": "^3.4.4",
+    "mysql2": "^3.9.7",
+    "better-sqlite3": "^10.0.0"
+  },
+  "peerDependenciesMeta": {
+    "postgres": {
+      "optional": true
+    },
+    "mysql2": {
+      "optional": true
+    },
+    "better-sqlite3": {
+      "optional": true
+    }
+  }
+}
